@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Mentor Console Test</title>
+</head>
+<body>
+    <h1>AI Mentor Console Test</h1>
+    <p>Open browser console and check for AI Mentor logs when you create a journal entry.</p>
+    <p>Look for these log messages:</p>
+    <ul>
+        <li>🚀 Attempting Groq API analysis...</li>
+        <li>📝 Raw API Response: ...</li>
+        <li>✅ API analysis successful - using API response</li>
+        <li>🔍 Parsing API response...</li>
+        <li>✅ Parsed X actions from API response</li>
+    </ul>
+    
+    <p><strong>Instructions:</strong></p>
+    <ol>
+        <li>Go to <a href="http://localhost:3001" target="_blank">http://localhost:3001</a></li>
+        <li>Open browser console (F12)</li>
+        <li>Create a journal entry</li>
+        <li>Check console for the above log messages</li>
+        <li>If you see "⚠️ API response too short, using fallback" or "❌ API failed, using fallback", there's still an issue</li>
+        <li>If you see "✅ API analysis successful - using API response", the fix is working!</li>
+    </ol>
+    
+    <script>
+        console.log('🧪 AI Mentor Console Test Page Loaded');
+        console.log('📋 Instructions:');
+        console.log('1. Go to http://localhost:3001');
+        console.log('2. Create a journal entry');
+        console.log('3. Look for AI Mentor API logs in console');
+        console.log('4. Verify API responses are being used instead of fallback text');
+    </script>
+</body>
+</html>

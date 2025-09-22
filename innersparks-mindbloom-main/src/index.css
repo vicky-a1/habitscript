@@ -1,0 +1,224 @@
+/* Flourish Design System - World's Best Journal App */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Flourish Color Palette - Purple & Teal Theme */
+    --primary: 262 83% 58%;          /* Rich purple #8B5CF6 */
+    --primary-dark: 262 83% 48%;     /* Darker purple */
+    --primary-light: 262 83% 88%;    /* Light purple */
+    --primary-glow: 262 83% 75%;     /* Purple glow */
+    --primary-foreground: 0 0% 100%; /* White text on purple */
+
+    /* Teal Accent */
+    --accent: 178 78% 57%;           /* Teal #4DD0E1 */
+    --accent-dark: 178 78% 47%;      /* Darker teal */
+    --accent-light: 178 78% 87%;     /* Light teal */
+    --accent-foreground: 0 0% 100%;  /* White on accent */
+
+    /* Secondary Colors */
+    --secondary: 220 14% 96%;        /* Very light gray */
+    --secondary-foreground: 220 9% 46%; /* Medium gray text */
+
+    /* Background Colors */
+    --background: 0 0% 98%;          /* Off-white background #FAFAFA */
+    --foreground: 220 9% 15%;        /* Very dark gray text */
+    
+    /* Card Colors */
+    --card: 0 0% 100%;               /* Pure white cards */
+    --card-foreground: 220 9% 15%;  /* Dark text on cards */
+    --card-soft: 220 14% 98%;       /* Soft gray-tinted white */
+
+    /* Muted Colors */
+    --muted: 220 14% 91%;           /* Light gray */
+    --muted-foreground: 220 9% 46%; /* Medium gray */
+
+    /* Interactive Elements */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 9% 15%;
+
+    /* Border & Ring */
+    --border: 220 13% 91%;          /* Light gray borders */
+    --input: 220 13% 91%;           /* Input borders */
+    --ring: 262 83% 58%;            /* Purple focus rings */
+
+    /* Status Colors */
+    --success: 142 76% 36%;         /* Green for success */
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;          /* Orange for warnings */
+    --warning-foreground: 220 9% 15%;
+    --destructive: 0 84% 60%;       /* Red for destructive actions */
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Design Elements */
+    --radius: 0.5rem;               /* Smaller radius for cleaner look */
+    --radius-large: 0.75rem;
+    --radius-small: 0.25rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(178 78% 57%));
+    --gradient-calm: linear-gradient(180deg, hsl(220 14% 98%), hsl(0 0% 98%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 14% 98%), hsl(0 0% 100%));
+
+    /* Shadows - Softer for cleaner look */
+    --shadow-soft: 0 1px 3px 0 hsl(220 9% 15% / 0.08), 0 1px 2px 0 hsl(220 9% 15% / 0.04);
+    --shadow-medium: 0 4px 6px -1px hsl(220 9% 15% / 0.08), 0 2px 4px -1px hsl(220 9% 15% / 0.04);
+    --shadow-strong: 0 10px 15px -3px hsl(220 9% 15% / 0.08), 0 4px 6px -2px hsl(220 9% 15% / 0.04);
+
+    /* Transitions */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 9% 46%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 220 9% 15%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 262 83% 58%;
+  }
+
+  .dark {
+    /* Dark Mode - Flourish Dark Theme */
+    --primary: 262 83% 68%;          /* Brighter purple for dark mode */
+    --primary-dark: 262 83% 78%;     /* Even brighter for contrast */
+    --primary-light: 262 83% 28%;    /* Darker purple for backgrounds */
+    --primary-glow: 262 83% 80%;     /* Bright purple glow */
+    --primary-foreground: 220 9% 5%; /* Very dark text */
+
+    --accent: 178 78% 67%;           /* Brighter teal */
+    --accent-dark: 178 78% 57%;      /* Standard teal */
+    --accent-light: 178 78% 37%;     /* Darker teal */
+    --accent-foreground: 220 9% 5%;  /* Dark text on accent */
+
+    --secondary: 220 9% 15%;         /* Dark gray */
+    --secondary-foreground: 262 83% 68%; /* Purple text */
+
+    --background: 220 9% 5%;         /* Very dark background */
+    --foreground: 0 0% 95%;          /* Light text */
+    
+    --card: 220 9% 8%;               /* Dark cards */
+    --card-foreground: 0 0% 95%;     /* Light text on cards */
+    --card-soft: 220 9% 12%;         /* Slightly lighter dark */
+
+    --muted: 220 9% 20%;            /* Dark muted */
+    --muted-foreground: 220 9% 65%; /* Medium light gray */
+
+    --popover: 220 9% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --border: 220 9% 20%;           /* Dark borders */
+    --input: 220 9% 20%;            /* Dark input borders */
+    --ring: 262 83% 68%;            /* Purple focus rings */
+
+    --success: 142 76% 46%;         /* Brighter green for dark mode */
+    --success-foreground: 220 9% 5%;
+    --warning: 38 92% 60%;          /* Brighter orange */
+    --warning-foreground: 220 9% 5%;
+    --destructive: 0 84% 70%;       /* Brighter red */
+    --destructive-foreground: 0 0% 95%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 68%), hsl(178 78% 67%));
+    --gradient-calm: linear-gradient(180deg, hsl(220 9% 8%), hsl(220 9% 5%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 46%), hsl(142 76% 56%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 9% 12%), hsl(220 9% 8%));
+
+    /* Dark Mode Shadows */
+    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-strong: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+
+    --sidebar-background: 220 9% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 262 83% 68%;
+    --sidebar-primary-foreground: 220 9% 5%;
+    --sidebar-accent: 220 9% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 9% 15%;
+    --sidebar-ring: 262 83% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+    line-height: 1.3;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-calm {
+    background: var(--gradient-calm);
+  }
+  
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Gentle animations for journaling interface */
+  @keyframes gentle-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-gentle-pulse {
+    animation: gentle-pulse 2s ease-in-out infinite;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-out;
+  }
+}
