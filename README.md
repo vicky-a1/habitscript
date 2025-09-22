@@ -559,6 +559,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-**Made with ❤️ by the InnerSparks Team**
+**Made with ❤️ by the Vikas and Team**
 
 For questions or support, please [open an issue](https://github.com/vicky-a1/habitscript/issues) or contact our team.
